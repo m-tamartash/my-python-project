@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: my_python_app
+    volumes:
+      - .:/app  # مونت کردن پوشه پروژه به داخل کانتینر
+    ports:
+      - "5000:5000"  # اگر برنامه شما از پورت 5000 استفاده می‌کند
+    environment:
+      - FLASK_ENV=development  # تنظیم متغیرهای محیطی (اختیاری)
