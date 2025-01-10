@@ -5,8 +5,8 @@ services:
     build: .
     container_name: my_python_app
     volumes:
-      - .:/app  # مونت کردن پوشه پروژه به داخل کانتینر
+      - .:/app
     ports:
-      - "5000:5000"  # اگر برنامه شما از پورت 5000 استفاده می‌کند
+      - "5002:5002"
     environment:
-      - FLASK_ENV=development  # تنظیم متغیرهای محیطی (اختیاری)
+      - FLASK_ENV=development
